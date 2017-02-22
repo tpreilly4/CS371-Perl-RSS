@@ -14,8 +14,13 @@ my @urls = $content =~ /(?=[^"]+" class="storylink">)([^"]*)/g;
 
 #TESTING
 foreach my $title ( @titles ){
-	print $title , "\n";
+	print "<title>$title</title>\n";
 }
+
+foreach my $title ( @titles ){
+	print "<description>$title</description>\n";
+}
+
 foreach my $url ( @urls ){
-	print $url , "\n";
+	print "<link>$url</link>\n";
 }
